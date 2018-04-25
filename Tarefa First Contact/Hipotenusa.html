@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Hipotenusa</title>
+      </head>
+  <body>
+    <script>
+    
+      function hipotenusa(cat1,cat2){
+        let hip=((cat1*cat1)+(cat2*cat2))**0.5;
+        return hip;
+      }
+      
+      let catO = 4;
+      let catA = 3;
+      // Casos de Teste:
+      console.log(hipotenusa(catO,catA) === 5, 'hipotenusa(4, 3) === 5');
+      
+      console.log(hipotenusa(7, 24) === 25, 'hipotenusa(7, 24) === 25');
+      
+      console.log(hipotenusa(12, 19) === 22.47220505424423, 'hipotenusa(12, 19) === 22.47220505424423');
+
+      console.log(hipotenusa(1366, 768) === 1567.0928498337296, 'hipotenusa(1366, 768) === 1567.0928498337296');
+      // Adicione mais 2 Casos de Teste
+      console.log(hipotenusa(65, 89) === 110.20889256316842, 'hipotenusa(65, 89) === 110.20889256316842');
+
+      console.log(hipotenusa(1546,123) === 1550.8852310857822, 'hipotenusa(1546,123) === 1550.8852310857822');
+      
+    </script>
+  </body>
+</html>

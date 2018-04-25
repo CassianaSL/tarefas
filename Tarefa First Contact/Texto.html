@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Texto</title>
+    </head>
+    <body>
+        <script>
+        //REVERSE
+        function reverse(str){
+            let rev='';
+            for(let i=str.length-1; i>=0; i--){
+                rev+=str[i];
+            }
+            return rev;
+        }
+    
+        let t1 = 'teste';
+        let r1 = reverse(t1);
+
+        // Casos de Teste
+        console.log(r1==='etset',"reverse('teste')==='etset'");
+
+        console.log(reverse('internet das coisas') === 'sasioc sad tenretni', "reverse('internet das coisas') === 'sasioc sad tenretni'");
+
+        console.log(reverse('objeto') === 'otejbo', "reverse('objeto') === 'otejbo'");
+
+        console.log(reverse('Aula de DBO') === 'OBD ed aluA', "reverse('Aula de DBO') === 'OBD ed aluA'");
+
+        console.log(reverse('Info 2C') === 'C2 ofnI', "reverse('Info 2C') === 'C2 ofnI'");
+        
+        //Palindromo
+        function espaco(str){
+            let semesp='';
+            for(let i=str.length-1; i>=0; i--){
+            if(str[i]!==' '){
+                semesp+=str[i];
+            }
+            }
+            return semesp;
+        }
+        function palindrome(str){
+            let rev= reverse(str);
+            if(espaco(rev)===espaco(str)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        let t2 = 'pato';
+        let r2 = palindrome(t2);
+
+        // Casos de Teste:
+        console.log(r2 === false, "palindrome(t2)===false");
+
+        console.log(palindrome('arara') === true, "palindrome('arara') === true");
+
+        console.log(palindrome('a cara rajada da jararaca') === true, "palindrome('a cara rajada da jararaca') === true");
+        // Adicione mais 2 Casos de Teste para palindrome
+        console.log(palindrome('subi no onibus') === true, "palindrome('subi no onibus') === true");
+        
+        console.log(palindrome('desenvolvimento baseado em objeto') === false, "palindrome('desenvolvimento baseado em objeto') === false");
+
+        //strip
+        function strip(str,car){
+            let strfinal='';
+            for(let i=0;i<str.length;i++){
+                if(str[i]!==car){
+                    strfinal+=str[i];
+                }
+            }
+            return strfinal;
+        }
+
+        let t3 = 'info: poo';
+        let r3 = strip(t3, ':');
+ 
+        // Casos de Teste:
+        console.log(r3 === 'info poo', "r3 === 'info poo'");
+
+        console.log(strip('.teste....de.strip..', '.') === 'testedestrip', "strip('.teste....de.strip..', '.') === 'testedestrip'");
+
+        console.log(strip('arara', 'a') === 'rr', "strip('arara', 'a') === 'rr'");
+
+        console.log(strip('analise e desenvolvimento de sistemas', 'e') === 'analis  dsnvolvimnto d sistmas', "strip('analise e desenvolvimento de sistemas', 'e') === 'analis  dsnvolvimnto d sistmas'");
+        // Adicione mais 2 Casos de Teste para strip
+        console.log(strip('fisica, quimica e biologia', 'i') === 'fsca, qumca e bologa', "strip('fisica, quimica e biologia', 'i') === 'fsca, qumca e bologa'");
+
+        console.log(strip('test;;ando;;;;;fun;;ção;;;;;str;;ip', ';') === 'testandofunçãostrip', "strip('test;;ando;;;;;fun;;ção;;;;;str;;ip', ';') === 'testandofunçãostrip'");
+
+        </script>
+    </body>
+</html>
