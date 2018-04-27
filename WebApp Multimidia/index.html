@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multimídia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <label for="foto">Adicione sua foto: </label>
+    <input id="foto" type="file" name="foto" accept="img/*">
+    <button id="enviar">Enviar</button>
+    <img id="img" width="20%" height="20%">
+    <p id="name">
+        <label for="nome">Seu nome: </label>
+        <input type="text" id="nome">
+    </p>
+    <section>
+        <div>
+            <h2>Playlist 1</h2>
+            <p>
+                <label>Infinity</label>
+                <audio src="Infinity.mp3" controls></audio>
+            </p>
+            <p>
+                <label>I Can't</label>
+                <audio src="Elvis.mp3" controls></audio>
+            </p>
+        </div>
+    </section>
+    <label for="pl">Nova Playlist: </label>
+    <input id="pl" type="text">
+
+    <script src="main.js"></script>
+</body>
+</html>
